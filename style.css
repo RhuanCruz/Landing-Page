@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url(/img/backgrounLandingPS5.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: 10px;
+    width: 80%;
+    box-shadow: 0 0 1rem rgb(0, 0, 0.3);
+    border-radius: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin: 2px;
+    width: 200px;
+    height: 100px;
+    flex-shrink: 0;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.logo:hover{
+    width: 220px;
+    height: 110px;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+li {
+    margin: 10px;
+    margin-right: 80px;
+    list-style: none;
+    display: inline-block;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: rgb(0, 80, 184);
+}
+
+main {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colum-1 {
+    margin-left: 10px;
+    position: relative;
+}
+
+.colum-1::before{
+    content: '';
+    width: 10px;
+    height: 50%;
+    background: linear-gradient(
+    90deg,
+    #1f53ff 20.45%,
+    rgba(0, 102, 255, 0.74) 62.93%,
+    rgba(255, 255, 255, 0) 74.63%
+    );
+    position: absolute;
+    left: -20px;
+    top: 8px;
+}
+
+h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(180deg, #0500ff 0%, #000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+h2:hover{
+    font-size: 64px;
+}
+
+p {
+    margin-top: 10px;
+    color: #4A5E86;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn {
+    margin-left: 5px;
+    margin-top: 20px;
+    color: #000000;
+    font-size: 28px;
+    width: 223px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 5px solid #0b0088;
+    background: rgba(0, 14, 43, 0);
+    background: transparent;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.Comprar:hover {
+    background: #00158b;
+    color: whitesmoke;
+}
+
+.colum-2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    border-radius: 50px 0 0 50px;
+    background: linear-gradient(
+    90deg,
+    #1f53ff 20.45%,
+    rgba(0, 102, 255, 0.74) 62.93%,
+    rgba(255, 255, 255, 0) 74.63%
+    );
+    z-index: 1;
+    overflow: hidden;
+}
+
+.img-controller {
+    z-index: 2;
+    width: 50px;
+    background: transparent;
+}
+
+.botao-controller {
+    z-index: 2;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.img-atual {
+    z-index: 3;
+    animation: moveControle 2s infinite alternate ease-in-out;
+}
+
+
+
+.menu{
+    margin-right: 100px;
+    display: none;
+}
+
+#menu-list{
+    position: relative;
+    top: 10px;
+    transition: all 0.5s 0.2s ease-in-out;
+}
+
+
+@media(max-width: 1200px){
+    .botao-controller{
+        position: absolute;
+        top: 300px;
+        right: 225px;
+    }
+}
+
+@media(max-width: 1050px){
+    .img-atual{
+    width: 400px;
+    }
+    .botao-controller{
+    position: absolute;
+    top: 235px;
+    right: 160px;
+    }
+    .color-box{
+        right: 80px;
+        width: 80%;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+
+}
+
+
+@media(max-width: 900px){
+    body{
+        background: whitesmoke;
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        overflow: auto;
+    }
+
+    main{
+        flex-direction: column-reverse;
+    }
+
+    .color-box{
+        transform: translateX(-5px);
+    }
+    .colum-2{
+        margin: 20px;
+    }
+    #menu-list{
+        position: relative;
+        top: 60px;
+        left: 100px;
+        overflow: hidden;
+    }
+    .menu{
+        display: block;
+    }
+    .nav-li{
+        display: block;
+    }
+
+}
+
+@media(max-width: 500px){
+    
+    header{
+        margin: 0;
+        width: 80%;
+    }
+
+    .colum-2{
+        margin-top: 50px;
+    }
+
+}
+
+@keyframes moveControle {
+    from{
+        transform: translate(-2%, -5%) rotate(7deg);
+    }
+}

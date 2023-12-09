@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Playstation Store</title>
+</head>
+
+<body>
+    <div  class="container">
+        <header>
+            <img  class="logo" src="/img/LOGOps.png" alt="">
+            <nav>
+                <ul id="menu-list">
+                    <li class="nav-li"><a class="nav-link" href="">Consoles</a></li>
+                    <li class="nav-li"><a class="nav-link" href="">Acessórios</a></li>
+                    <li class="nav-li"><a class="nav-link" href="">Jogos</a></li>
+                </ul>
+            </nav>
+            <img class="menu" src="/img/btnmenu.svg" alt="menu" onclick="showMenu()">
+        </header>
+        <main>
+            <div class="colum-1">
+                <h1>DualSense Midnight</h1>
+                <h2>R$ 230,00</h2>
+                <p>Você é apaixonado por jogos e busca a experiência definitiva no universo do PlayStation 5?
+                Apresentamos o Controle para PS5, uma obra-prima que redefine o significado de jogar.
+                Desenvolvido para maximizar a imersão e o desempenho, este controle eleva seus momentos de jogo
+                a um novo patamar.
+                </p>
+                <button class="btn Comprar">Comprar</button>
+            </div>
+            <div class="colum-2">
+                <img class="img-atual" src="/img/ControlePS5Preto.jpeg" alt="Dualsense Midnight">
+                <div class="color-box"></div>
+                <button class="botao-controller" type="button">
+                    <img  class="img-controller" src="/img/ControlePS5Branco.png" alt="Opção 2"></button>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    const menulist = document.getElementById("menu-list")
+    menulist.style.maxHeight ="0px"
+    
+    function showMenu() {
+        if(menulist.style.maxHeight == "0px"){
+            menulist.style.maxHeight = "120px"
+        }else{
+            menulist.style.maxHeight = "0px"
+        }
+    }
+</script>
+</html>
